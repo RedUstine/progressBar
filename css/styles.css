@@ -1,0 +1,92 @@
+:root{
+    --bg: #f8f8fa90;
+    --wht: #fff;
+    --red: #f66;
+    --blue: #0979db;
+    --grin: #09dba0;
+    --yel: #fac451;
+    --text: #acada8;
+    --grey: #7c7d78;
+    --dark: #232042;
+    --shad: 0 0 14px #0001;
+    --rad: 5px;
+    --trans: transparent;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    background-color: var(--trans);
+    border: 0;
+    outline: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all .5s ease-in-out;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--dark);
+}
+
+/* Progress Counter Style */
+.counter-section{
+    padding: 4rem;
+    background-color: var(--bg);
+    position: relative;
+}
+.counter-box{
+    position: relative;
+    margin: 2rem auto;
+    height: 200px;
+    width: 200px;
+    background: conic-gradient(var(--grin) calc(360/100*75deg), var(--wht) 0deg);
+    box-shadow: var(--shad);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.counter-box::after{
+    content: '';
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    background-color: #fafaf8;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.counter-text{
+    position: relative;
+    z-index: 10;
+    color: var(--grin);
+    font-size: 2rem;
+}
+.counter-form{
+    border-radius: 5px;
+    background-color: var(--wht);
+    padding: 3rem;
+    max-width: 40rem;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: var(--shad);
+}
+.form-input{
+    border: 1px solid #0002;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+}
+.counter-btn{
+    border-radius: 2rem;
+    padding: 0.7rem 1rem;
+    color: var(--wht);
+    background-color: var(--yel);
+    cursor: pointer;
+}
